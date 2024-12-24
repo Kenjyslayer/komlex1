@@ -1,0 +1,138 @@
+﻿/* General Styles */
+:root {
+    --background: #F3F4F6;
+    --primary: #005F73;
+    --secondary: #94D2BD;
+    --highlight: #E9D8A6;
+    --accent: #EE9B00;
+    --text-dark: #264653;
+    --text-light: #FFFFFF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--primary);
+    padding: 1rem;
+    color: var(--text-light);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: bold;
+        }
+
+            nav ul li a.active {
+                text-decoration: underline;
+            }
+
+/* Layout */
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+}
+
+.main-content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: var(--highlight);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Articles */
+.article {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.article-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.article-text {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        nav ul li {
+            margin: 0.5rem 0;
+        }
+
+    .article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

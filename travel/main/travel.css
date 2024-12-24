@@ -1,0 +1,128 @@
+﻿/* Зміна кольорів теми */
+:root {
+    --background: #F3F4F6; /* Soft light gray */
+    --primary: #005F73; /* Deep teal */
+    --secondary: #94D2BD; /* Soft mint green */
+    --highlight: #E9D8A6; /* Warm beige */
+    --accent: #EE9B00; /* Rich amber */
+    --text-dark: #264653; /* Dark navy blue */
+    --text-light: #FFFFFF; /* Pure white */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text-dark);
+}
+
+nav {
+    background: var(--primary);
+    padding: 1rem;
+}
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+    }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+    header .logo {
+        width: 150px;
+        height: 150px;
+        background: var(--secondary);
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+h1 {
+    margin: 1rem 0;
+    color: var(--primary);
+}
+
+main {
+    padding: 2rem;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+article {
+    width: 300px;
+    background: var(--highlight);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    article .image {
+        width: 100%;
+        height: 200px;
+        background: var(--accent);
+        border-radius: 4px;
+    }
+
+.subscription {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+    .subscription form {
+        display: inline-flex;
+        gap: 0.5rem;
+    }
+
+    .subscription input {
+        padding: 0.5rem;
+        border: 1px solid var(--text-dark);
+        border-radius: 4px;
+    }
+
+    .subscription button {
+        padding: 0.5rem 1rem;
+        background: var(--accent);
+        color: var(--text-light);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+footer {
+    background: var(--primary);
+    color: var(--text-light);
+    padding: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    footer ul li {
+        margin: 0.5rem 0;
+    }
